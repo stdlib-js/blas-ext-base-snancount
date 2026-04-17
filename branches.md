@@ -38,19 +38,19 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/stats/strided/snancount"
-%% click B href "https://github.com/stdlib-js/stats-strided-snancount/tree/main"
-%% click C href "https://github.com/stdlib-js/stats-strided-snancount/tree/production"
-%% click D href "https://github.com/stdlib-js/stats-strided-snancount/tree/esm"
-%% click E href "https://github.com/stdlib-js/stats-strided-snancount/tree/deno"
-%% click F href "https://github.com/stdlib-js/stats-strided-snancount/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/base/snancount"
+%% click B href "https://github.com/stdlib-js/blas-ext-base-snancount/tree/main"
+%% click C href "https://github.com/stdlib-js/blas-ext-base-snancount/tree/production"
+%% click D href "https://github.com/stdlib-js/blas-ext-base-snancount/tree/esm"
+%% click E href "https://github.com/stdlib-js/blas-ext-base-snancount/tree/deno"
+%% click F href "https://github.com/stdlib-js/blas-ext-base-snancount/tree/umd"
 ```
 
-[stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/stats/strided/snancount
-[production-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/production
-[deno-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/deno
-[deno-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/umd
-[umd-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/esm
-[esm-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/esm/README.md
+[stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/base/snancount
+[production-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/production
+[deno-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/deno
+[deno-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/umd
+[umd-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/esm
+[esm-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/esm/README.md

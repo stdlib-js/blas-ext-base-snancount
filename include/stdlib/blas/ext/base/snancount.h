@@ -16,8 +16,8 @@
 * limitations under the License.
 */
 
-#ifndef STDLIB_STATS_STRIDED_SNANCOUNT_H
-#define STDLIB_STATS_STRIDED_SNANCOUNT_H
+#ifndef STDLIB_BLAS_EXT_BASE_SNANCOUNT_H
+#define STDLIB_BLAS_EXT_BASE_SNANCOUNT_H
 
 #include "stdlib/blas/base/shared.h"
 
@@ -42,4 +42,4 @@ CBLAS_INT API_SUFFIX(stdlib_strided_snancount_ndarray)( const CBLAS_INT N, const
 }
 #endif
 
-#endif // !STDLIB_STATS_STRIDED_SNANCOUNT_H
+#endif // !STDLIB_BLAS_EXT_BASE_SNANCOUNT_H

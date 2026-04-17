@@ -4,13 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-13)
+## Unreleased (2026-04-17)
 
 <section class="features">
 
 ### Features
 
--   [`87f3303`](https://github.com/stdlib-js/stdlib/commit/87f3303eb8608fa6933b3e9eb680192cbcb9785f) - add `stats/strided/snancount` [(#11438)](https://github.com/stdlib-js/stdlib/pull/11438)
+-   [`8edb14b`](https://github.com/stdlib-js/stdlib/commit/8edb14b2afd6ad44f3ac57e220517a17f7038af9) - add `blas/ext/base/snancount`
 
 </section>
 
@@ -22,7 +22,7 @@
 
 <details>
 
--   [`87f3303`](https://github.com/stdlib-js/stdlib/commit/87f3303eb8608fa6933b3e9eb680192cbcb9785f) - **feat:** add `stats/strided/snancount` [(#11438)](https://github.com/stdlib-js/stdlib/pull/11438) _(by Om-A-osc)_
+-   [`8edb14b`](https://github.com/stdlib-js/stdlib/commit/8edb14b2afd6ad44f3ac57e220517a17f7038af9) - **feat:** add `blas/ext/base/snancount` _(by Athan Reines)_
 
 </details>
 
@@ -36,7 +36,7 @@
 
 A total of 1 person contributed to this release. Thank you to this contributor:
 
--   Om-A-osc
+-   Athan Reines
 
 </section>
 

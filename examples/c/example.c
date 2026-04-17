@@ -16,7 +16,7 @@
 * limitations under the License.
 */
 
-#include "stdlib/stats/strided/snancount.h"
+#include "stdlib/blas/ext/base/snancount.h"
 #include <stdio.h>
 
 int main( void ) {

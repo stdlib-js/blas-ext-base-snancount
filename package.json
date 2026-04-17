@@ -1,5 +1,5 @@
 {
-  "name": "@stdlib/stats-strided-snancount",
+  "name": "@stdlib/blas-ext-base-snancount",
   "version": "0.0.0",
   "description": "Calculate the number of non-NaN elements in a single-precision floating-point strided array.",
   "license": "Apache-2.0",
@@ -35,7 +35,7 @@
   "homepage": "https://stdlib.io",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stdlib-js/stats-strided-snancount.git"
+    "url": "git://github.com/stdlib-js/blas-ext-base-snancount.git"
   },
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"

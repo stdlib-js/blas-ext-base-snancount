@@ -16,7 +16,7 @@
 * limitations under the License.
 */
 
-#include "stdlib/stats/strided/snancount.h"
+#include "stdlib/blas/ext/base/snancount.h"
 #include "stdlib/blas/base/shared.h"
 #include "stdlib/napi/export.h"
 #include "stdlib/napi/argv.h"
