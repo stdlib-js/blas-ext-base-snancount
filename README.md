@@ -41,14 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-snancount
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-snancount@esm/index.mjs';
+var snancount = require( '@stdlib/blas-ext-base-snancount' );
 ```
 
 #### snancount( N, x, strideX )
@@ -56,7 +74,7 @@ import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-snanc
 Computes the number of non-`NaN` elements in a single-precision floating-point strided array.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var x = new Float32Array( [ 1.0, -2.0, NaN, 2.0 ] );
 
@@ -73,7 +91,7 @@ The function has the following parameters:
 The `N` and stride parameters determine which elements in the strided array are accessed at runtime. For example, to count every other element in `x`,
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var x = new Float32Array( [ 1.0, 2.0, NaN, -2.0, 4.0, 3.0, NaN, NaN ] );
 
@@ -86,7 +104,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var x0 = new Float32Array( [ 2.0, 1.0, NaN, -2.0, 3.0, 4.0, NaN, NaN ] );
 var x1 = new Float32Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -100,7 +118,7 @@ var v = snancount( 4, x1, 2 );
 Computes the number of non-`NaN` elements in a single-precision floating-point strided array using alternative indexing semantics.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var x = new Float32Array( [ 2.0, 1.0, -2.0, -2.0, 3.0, 4.0, NaN, NaN ] );
 
@@ -115,7 +133,7 @@ The function has the following additional parameter:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameter supports indexing semantics based on a starting index. For example, to count every other element in `x` starting from the second element,
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var x = new Float32Array( [ 2.0, 1.0, NaN, -2.0, 3.0, 4.0, NaN, NaN ] );
 
@@ -143,16 +161,11 @@ var v = snancount.ndarray( 4, x, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@esm/index.mjs';
-import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-snancount@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var snancount = require( '@stdlib/blas-ext-base-snancount' );
 
 function rand() {
     if ( bernoulli( 0.8 ) < 1 ) {
@@ -166,10 +179,6 @@ console.log( x );
 
 var v = snancount( x.length, x, 1 );
 console.log( v );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -178,7 +187,126 @@ console.log( v );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/ext/base/snancount.h"
+```
+
+#### stdlib_strided_snancount( N, \*X, strideX )
+
+Computes the number of non-`NaN` elements in a single-precision floating-point strided array.
+
+```c
+const float x[] = { 1.0f, 2.0f, 0.0f / 0.0f, 4.0f, 5.0f, 6.0f, 0.0f / 0.0f, 8.0f };
+
+int v = stdlib_strided_snancount( 4, x, 2 );
+// returns 2
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] float*` input array.
+-   **strideX**: `[in] CBLAS_INT` stride length for `X`.
+
+```c
+CBLAS_INT stdlib_strided_snancount( const CBLAS_INT N, const float *X, const CBLAS_INT strideX );
+```
+
+#### stdlib_strided_snancount_ndarray( N, \*X, strideX, offsetX )
+
+Computes the number of non-`NaN` elements in a single-precision floating-point strided array using alternative indexing semantics.
+
+```c
+const float x[] = { 2.0f, 1.0f, 0.0f / 0.0f, -2.0f, 3.0f, 4.0f, 0.0f / 0.0f, 0.0f / 0.0f };
+
+int v = stdlib_strided_snancount_ndarray( 4, x, 2, 1 );
+// returns 3
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] float*` input array.
+-   **strideX**: `[in] CBLAS_INT` stride length for `X`.
+-   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
+
+```c
+CBLAS_INT stdlib_strided_snancount_ndarray( const CBLAS_INT N, const float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX );
+```
+
+</section>
+
+<!-- /.usage -->
+
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+
+<section class="notes">
+
+### Notes
+
+-   If `N <= 0`, both functions return `0`.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/ext/base/snancount.h"
+#include <stdio.h>
+
+int main( void ) {
+    // Create a strided array:
+    const float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 0.0f/0.0f, 0.0f/0.0f };
+
+    // Specify the number of elements:
+    const int N = 5;
+
+    // Specify the stride length:
+    const int strideX = 2;
+
+    // Compute the number of non-NaN elements:
+    int v = stdlib_strided_snancount( N, x, strideX );
+
+    // Print the result:
+    printf( "count: %d\n", v );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -197,7 +325,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -224,19 +352,19 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/stats-strided-snancount.svg
-[npm-url]: https://npmjs.org/package/@stdlib/stats-strided-snancount
+[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-ext-base-snancount.svg
+[npm-url]: https://npmjs.org/package/@stdlib/blas-ext-base-snancount
 
-[test-image]: https://github.com/stdlib-js/stats-strided-snancount/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/stats-strided-snancount/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/blas-ext-base-snancount/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-ext-base-snancount/actions/workflows/test.yml?query=branch:main
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-strided-snancount/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/stats-strided-snancount?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-ext-base-snancount/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/blas-ext-base-snancount?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/stats-strided-snancount.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/stats-strided-snancount/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-ext-base-snancount.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/blas-ext-base-snancount/main
 
 -->
 
@@ -250,17 +378,17 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/deno
-[deno-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/umd
-[umd-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/stats-strided-snancount/tree/esm
-[esm-readme]: https://github.com/stdlib-js/stats-strided-snancount/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/stats-strided-snancount/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/deno
+[deno-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/umd
+[umd-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/blas-ext-base-snancount/tree/esm
+[esm-readme]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/blas-ext-base-snancount/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-strided-snancount/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-snancount/main/LICENSE
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/esm
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
