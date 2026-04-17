@@ -48,6 +48,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-snancount@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-ext-base-snancount/tags). For example,
+
+```javascript
 import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-snancount@v0.0.0-deno/mod.js';
 ```
 
@@ -147,7 +152,7 @@ var v = snancount.ndarray( 4, x, 2, 1 );
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
 import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
-import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-snancount@v0.0.0-deno/mod.js';
+import snancount from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-snancount@deno/mod.js';
 
 function rand() {
     if ( bernoulli( 0.8 ) < 1 ) {
