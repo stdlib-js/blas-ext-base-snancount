@@ -258,9 +258,7 @@ CBLAS_INT stdlib_strided_snancount_ndarray( const CBLAS_INT N, const float *X, c
 
 <!-- /.usage -->
 
-
 <!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
 
 <section class="notes">
 
@@ -393,7 +391,6 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
-
 
 <!-- </related-links> -->
 
