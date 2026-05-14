@@ -91,6 +91,8 @@
     "stats",
     "mathematics",
     "math",
+    "blas",
+    "extended",
     "count",
     "nancount",
     "non-nan",
