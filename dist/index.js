@@ -1,4 +1,4 @@
-"use strict";var u=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var s=u(function(z,v){
+"use strict";var u=function(e,r){return function(){try{return r||e((r={exports:{}}).exports,r),r.exports}catch(n){throw (r=0, n)}};};var s=u(function(z,v){
 var j=require('@stdlib/math-base-assert-is-nanf/dist');function m(e,r,n,y){var a,i,t;if(e<=0)return 0;for(a=0,i=y,t=0;t<e;t++)j(r[i])||(a+=1),i+=n;return a}v.exports=m
 });var q=u(function(A,c){
 var l=require('@stdlib/strided-base-stride2offset/dist'),R=s();function _(e,r,n){return R(e,r,n,l(e,n))}c.exports=_
